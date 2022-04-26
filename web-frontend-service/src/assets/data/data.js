@@ -19,7 +19,7 @@ export const NFT__DATA = [
   {
     id: "01",
     title: "Travel Monkey Club",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia, nostrum et deleniti vero corrupti facilis minima laborum nesciunt nulla error natus saepe illum quasi ratione suscipit tempore dolores. Recusandae, similique modi voluptates dolore repellat eum earum sint.",
+    desc: "Just a monkey travel with his friend a Siba Inu. Their smile radiate the warmest of feeling among mens.",
     imgUrl: img01,
     creator: "Trista Francis",
     creatorImg: ava01,
@@ -29,9 +29,9 @@ export const NFT__DATA = [
   {
     id: "02",
     title: "Sir Lion Swag",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia, nostrum et deleniti vero corrupti facilis minima laborum nesciunt nulla error natus saepe illum quasi ratione suscipit tempore dolores. Recusandae, similique modi voluptates dolore repellat eum earum sint.",
+    desc: "Looking at me and what do you see? Is it a face? Side way, bald man with a mustache? Or is it something else entirely?",
     imgUrl: img02,
-    creator: "Trista Francis",
+    creator: "Kira Nguyen",
     creatorImg: ava02,
     currentBid: 5.09,
   },
@@ -39,69 +39,69 @@ export const NFT__DATA = [
   {
     id: "03",
     title: "Civilian",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia, nostrum et deleniti vero corrupti facilis minima laborum nesciunt nulla error natus saepe illum quasi ratione suscipit tempore dolores. Recusandae, similique modi voluptates dolore repellat eum earum sint.",
+    desc: "To live is to eat, is to enjoy life. And boiss do boba taste good. Looking at me enjoying will make you want one too.",
     imgUrl: img03,
-    creator: "Trista Francis",
+    creator: "Samuel Chih",
     creatorImg: ava03,
     currentBid: 6.89,
   },
 
   {
     id: "04",
-    title: "Guard",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia, nostrum et deleniti vero corrupti facilis minima laborum nesciunt nulla error natus saepe illum quasi ratione suscipit tempore dolores. Recusandae, similique modi voluptates dolore repellat eum earum sint.",
+    title: "Cute Guard",
+    desc: "Dwn't kwow about chu but I am a black cat nya. I am kawaii af and you should bring me home with you so we can go trick-or-treat to gether uwu.",
     imgUrl: img04,
-    creator: "Trista Francis",
+    creator: "Parker Vallier",
     creatorImg: ava04,
     currentBid: 7.89,
   },
 
   {
     id: "05",
-    title: "Travel Monkey Club",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia, nostrum et deleniti vero corrupti facilis minima laborum nesciunt nulla error natus saepe illum quasi ratione suscipit tempore dolores. Recusandae, similique modi voluptates dolore repellat eum earum sint.",
+    title: "Here Come Da Money",
+    desc: "Buy me and I'll bring you even more money. See me holding a golden fish with my hand. You can't say that I am not magical cat.",
     imgUrl: img05,
-    creator: "Trista Francis",
+    creator: "Rahul Sharma",
     creatorImg: ava05,
     currentBid: 4.89,
   },
 
   {
     id: "06",
-    title: "Sir Lion Swag",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia, nostrum et deleniti vero corrupti facilis minima laborum nesciunt nulla error natus saepe illum quasi ratione suscipit tempore dolores. Recusandae, similique modi voluptates dolore repellat eum earum sint.",
+    title: "Peace From Space",
+    desc: "Hello earthling, I am above you... literally. Saying hi from way above while listen to my classical music since that music is 'way above' you... Got it?? Hee h... I'll stay up here.",
     imgUrl: img06,
-    creator: "Trista Francis",
+    creator: "Calvin Huyen",
     creatorImg: ava06,
     currentBid: 4.99,
   },
 
   {
     id: "07",
-    title: "Civilian",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia, nostrum et deleniti vero corrupti facilis minima laborum nesciunt nulla error natus saepe illum quasi ratione suscipit tempore dolores. Recusandae, similique modi voluptates dolore repellat eum earum sint.",
+    title: "Ready For War",
+    desc: "Are you ready to go to war bruv. Put on your helmet, get you sword and we'll see you in Vahalla. Charging to the moon bruv!!!",
     imgUrl: img07,
-    creator: "Trista Francis",
+    creator: "Duc Nguyen",
     creatorImg: ava03,
     currentBid: 5.89,
   },
 
   {
     id: "08",
-    title: "Guard",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia, nostrum et deleniti vero corrupti facilis minima laborum nesciunt nulla error natus saepe illum quasi ratione suscipit tempore dolores. Recusandae, similique modi voluptates dolore repellat eum earum sint.",
+    title: "Just A Happy Bull",
+    desc: "I am just happy to be here!...                                     That's it ^^.",
     imgUrl: img08,
-    creator: "Trista Francis",
+    creator: "Duc Nguyen",
     creatorImg: ava04,
     currentBid: 5.89,
   },
 
   {
     id: "09",
-    title: "Travel Monkey Club",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia, nostrum et deleniti vero corrupti facilis minima laborum nesciunt nulla error natus saepe illum quasi ratione suscipit tempore dolores. Recusandae, similique modi voluptates dolore repellat eum earum sint.",
+    title: "Pondering Monkey",
+    desc: "Did you see a happy bull somewhere. He just prancing around while I didn't pay attention and now he is gone.",
     imgUrl: img09,
-    creator: "Trista Francis",
+    creator: "Duc Nguyen",
     creatorImg: ava05,
     currentBid: 5.89,
   },
@@ -110,8 +110,8 @@ export const NFT__DATA = [
 export const SELLER__DATA = [
   {
     id: "01",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia",
-    sellerName: "Ryan Carder",
+    desc: "Carry my whole team since Jan 2022",
+    sellerName: "Samuel Chih",
     sellerImg: ava01,
     currentBid: 5.89,
     fbUrl: "#",
@@ -121,8 +121,8 @@ export const SELLER__DATA = [
 
   {
     id: "02",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia",
-    sellerName: "Trista Francis",
+    desc: "Leaguage of Legend is life",
+    sellerName: "Rahul Sharma",
     sellerImg: ava02,
     currentBid: 5.89,
     fbUrl: "#",
@@ -132,8 +132,8 @@ export const SELLER__DATA = [
 
   {
     id: "03",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia",
-    sellerName: "Ryan Carder",
+    desc: "An NFTs website is just ez clapping",
+    sellerName: "Parker Vallier",
     sellerImg: ava03,
     currentBid: 5.89,
     fbUrl: "#",
@@ -144,9 +144,9 @@ export const SELLER__DATA = [
   {
     id: "04",
 
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia",
+    desc: "Why am I here again? And why am I leading people",
 
-    sellerName: "Ryan Carder",
+    sellerName: "Duc Nguyen",
     sellerImg: ava04,
     currentBid: 5.89,
     fbUrl: "#",
@@ -157,9 +157,9 @@ export const SELLER__DATA = [
   {
     id: "05",
 
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia",
+    desc: "Just another version of myself, a cooler more evil side... I hope",
 
-    sellerName: "Trista Francis",
+    sellerName: "Kira Nguyen",
     sellerImg: ava05,
     currentBid: 5.89,
     fbUrl: "#",
@@ -170,9 +170,9 @@ export const SELLER__DATA = [
   {
     id: "06",
 
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia",
+    desc: "I don't understand what is going on, but darn tootin I'll try my best.",
 
-    sellerName: "Trista Francis",
+    sellerName: "Calvin Huyen",
     sellerImg: ava06,
     currentBid: 5.89,
     fbUrl: "#",
@@ -182,7 +182,7 @@ export const SELLER__DATA = [
 
   {
     id: "01",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia",
+    desc: "[Something funny go here]",
     sellerName: "Ryan Carder",
     sellerImg: ava01,
     currentBid: 5.89,
@@ -193,7 +193,7 @@ export const SELLER__DATA = [
 
   {
     id: "02",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia",
+    desc: "Just a happy bot",
     sellerName: "Trista Francis",
     sellerImg: ava02,
     currentBid: 5.89,
@@ -204,7 +204,7 @@ export const SELLER__DATA = [
 
   {
     id: "03",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia",
+    desc: "Ditto",
     sellerName: "Ryan Carder",
     sellerImg: ava03,
     currentBid: 5.89,
@@ -216,7 +216,7 @@ export const SELLER__DATA = [
   {
     id: "04",
 
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia",
+    desc: "No idea what is this, but money!!!",
 
     sellerName: "Ryan Carder",
     sellerImg: ava04,
@@ -229,7 +229,7 @@ export const SELLER__DATA = [
   {
     id: "05",
 
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia",
+    desc: "I am fabulous",
 
     sellerName: "Trista Francis",
     sellerImg: ava05,
@@ -242,7 +242,7 @@ export const SELLER__DATA = [
   {
     id: "06",
 
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam adipisci cupiditate officia",
+    desc: "Seriously tho, what is NFTs?",
 
     sellerName: "Trista Francis",
     sellerImg: ava06,
