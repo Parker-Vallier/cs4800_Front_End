@@ -54,7 +54,7 @@ const Header = () => {
           <div className="logo">
             <h2 className=" d-flex gap-2 align-items-center ">
               <span>
-                <i class="ri-fire-fill"></i>
+                <i class="ri-copper-coin-fill"></i>
               </span>
               NFTbay
             </h2>
