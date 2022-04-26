@@ -73,7 +73,7 @@ const Footer = () => {
                 <span>
                   <i class="ri-copper-coin-fill"></i>
                 </span>
-                NFTs
+                NFTBay
               </h2>
               <p>
                 A student project of a digital marketplace for crypto collectibles 

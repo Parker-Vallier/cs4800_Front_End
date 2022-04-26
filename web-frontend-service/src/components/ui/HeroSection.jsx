@@ -3,7 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./hero-section.css";
 
-import heroImg from "../../assets/images/hero.jpg";
+import heroImg from "../../assets/images/shiba.png";
 
 const HeroSection = () => {
   return (
@@ -13,13 +13,14 @@ const HeroSection = () => {
           <Col lg="6" md="6">
             <div className="hero__content">
               <h2>
-                Discover rare digital art and collect
-                <span>sell extraordinary</span> NFTs
+                Welcome to
+                <span>NFTBay</span>
               </h2>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Deleniti excepturi omnis neque adipisci sequi ullam unde in
-                minus quis quos.
+                NFTbay, a student project of Cal Poly Pomona
+                that allow you to invest in the future. This is where dream
+                come true as we protect your art with the state of the art
+                technology that ensure you the authentic of your work.
               </p>
 
               <div className="hero__btns d-flex align-items-center gap-4">
