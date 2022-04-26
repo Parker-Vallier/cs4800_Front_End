@@ -71,14 +71,14 @@ const Footer = () => {
             <div className="logo">
               <h2 className=" d-flex gap-2 align-items-center ">
                 <span>
-                  <i class="ri-fire-fill"></i>
+                  <i class="ri-copper-coin-fill"></i>
                 </span>
                 NFTs
               </h2>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptate, quod repellat! Quis quos dolorum tenetur fuga?
-                Aspernatur rerum quae amet.
+                A student project of a digital marketplace for crypto collectibles 
+                and non-fungible tokens (NFTs). 
+                Buy, sell, and discover exclusive digital items.
               </p>
             </div>
           </Col>
@@ -151,8 +151,8 @@ const Footer = () => {
           <Col lg="12" className=" mt-4 text-center">
             <p className="copyright">
               {" "}
-              Copyrights 2022, Developed by Muhibur Rahman. @Muhib's Tech Diary
-              All Rights Reserved.{" "}
+              Developed by Group 1 with the help of Muhibur Rahman. from YouTube channel @Muhib's Tech Diary.
+              {" "}
             </p>
           </Col>
         </Row>
