@@ -8,7 +8,7 @@ import "../styles/wallet.css";
 const wallet__data = [
   {
     title: "Bitcoin",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium accusamus repellat rerum consequatur explicabo? Reiciendis!",
+    desc: "Bitcoin is the classic currency to use for NFTs!",
     icon: "ri-bit-coin-line",
   },
 
