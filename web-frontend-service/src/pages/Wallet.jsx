@@ -8,25 +8,25 @@ import "../styles/wallet.css";
 const wallet__data = [
   {
     title: "Bitcoin",
-    desc: "Bitcoin is the classic currency to use for NFTs!",
+    desc: "'Open-source, P2P money.' Bitcoin is the classic and most popular currency to use on our site!",
     icon: "ri-bit-coin-line",
   },
 
   {
     title: "Coinbase",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium accusamus repellat rerum consequatur explicabo? Reiciendis!",
+    desc: "'Trusted and easy-to-use,' Coinbase is one of the most user-friendly wallets that are recommended to those who've just begun their crypto-journey.",
     icon: "ri-coin-line",
   },
 
   {
     title: "Metamask",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium accusamus repellat rerum consequatur explicabo? Reiciendis!",
+    desc: "'Democratizing taccess to the decentralized web,' Metamask is also another of many recommended wallets that's popular among most users.",
     icon: "ri-money-cny-circle-line",
   },
 
   {
     title: "Authereum",
-    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium accusamus repellat rerum consequatur explicabo? Reiciendis!",
+    desc: "'Simply, the best Web3 experience at your fingertips.' Authereum is dedicated to those who wish to dive into Ethereum.",
     icon: "ri-bit-coin-line",
   },
 ];
@@ -42,9 +42,9 @@ const Wallet = () => {
               <div className="w-50 m-auto">
                 <h3 className="text-light">Connect your wallet</h3>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Minima numquam nisi, quam obcaecati a provident voluptas sequi
-                  unde officiis placeat!
+                  Thank you for choosing NFTbay! You may begin by linking one (or many)
+                  of your wallets to our database. Simply choose a wallet you're associated with
+                  and you may begin bidding or listing whatever your heart desires!
                 </p>
               </div>
             </Col>
