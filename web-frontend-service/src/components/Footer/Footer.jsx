@@ -76,7 +76,7 @@ const Footer = () => {
                 NFTBay
               </h2>
               <p>
-                A student project of a digital marketplace for crypto collectibles 
+                A student project of a digital marketplace for crypto-collectibles 
                 and non-fungible tokens (NFTs). 
                 Buy, sell, and discover exclusive digital items.
               </p>
@@ -151,7 +151,7 @@ const Footer = () => {
           <Col lg="12" className=" mt-4 text-center">
             <p className="copyright">
               {" "}
-              Developed by Group 1 with the help of Muhibur Rahman. from YouTube channel @Muhib's Tech Diary.
+              Developed by Group 1 with the help of Muhibur Rahman from YouTube channel, @Muhib's Tech Diary.
               {" "}
             </p>
           </Col>

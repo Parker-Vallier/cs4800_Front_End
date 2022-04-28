@@ -7,7 +7,7 @@ import "./step-section.css";
 const STEP__DATA = [
   {
     title: "Setup your wallet",
-    desc: "Once you’ve set up your wallet of choice, connect it to NFTBay by clicking the wallet icon here. We promised we'll only collected the data we need.",
+    desc: "Once you’ve set up your wallet of choice, connect it to NFTBay by clicking 'Connect Wallet.' We promise we'll only collected the data we need.",
     icon: "ri-wallet-line",
   },
 
@@ -25,7 +25,7 @@ const STEP__DATA = [
 
   {
     title: "List them for sale",
-    desc: "Choose between auctions, fixed-price listings, and declining-price listings. You choose how you want to sell your NFTs, and we help you sell them!",
+    desc: "Choose between auctions, fixed-price listings, and declining-price listings. You choose how you want to sell your NFTs, and we'll help you sell them!",
     icon: "ri-list-check",
   },
 ];

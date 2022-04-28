@@ -19,7 +19,7 @@ export const NFT__DATA = [
   {
     id: "01",
     title: "Travel Monkey Club",
-    desc: "Just a monkey travel with his friend a Siba Inu. Their smile radiate the warmest of feeling among mens.",
+    desc: "Just a monkey traveling with his friend, a Shiba Inu. Their smile radiates the warmest of feeling among men.",
     imgUrl: img01,
     creator: "Trista Francis",
     creatorImg: ava01,
@@ -29,7 +29,7 @@ export const NFT__DATA = [
   {
     id: "02",
     title: "Sir Lion Swag",
-    desc: "Looking at me and what do you see? Is it a face? Side way, bald man with a mustache? Or is it something else entirely?",
+    desc: "Look at me. What do you see? Am I a face? Sideways? Bald? With a mustache? Or am I something else entirely?",
     imgUrl: img02,
     creator: "Kira Nguyen",
     creatorImg: ava02,
@@ -38,8 +38,8 @@ export const NFT__DATA = [
 
   {
     id: "03",
-    title: "Civilian",
-    desc: "To live is to eat, is to enjoy life. And boiss do boba taste good. Looking at me enjoying will make you want one too.",
+    title: "Boba-fiend",
+    desc: "To live is to eat and to eat is to live. And boy, does boba taste good. Looking at me will make you want some too.",
     imgUrl: img03,
     creator: "Samuel Chih",
     creatorImg: ava03,
@@ -48,8 +48,8 @@ export const NFT__DATA = [
 
   {
     id: "04",
-    title: "Cute Guard",
-    desc: "Dwn't kwow about chu but I am a black cat nya. I am kawaii af and you should bring me home with you so we can go trick-or-treat to gether uwu.",
+    title: "Nya Cat",
+    desc: "I down't know abouwt uwu but I'm a bwack cat. I'm kawaii af awnd uwu sohuwd bwing me home with uwu so we cawn gow twick-ow-tweat togethew, nya!",
     imgUrl: img04,
     creator: "Parker Vallier",
     creatorImg: ava04,
@@ -58,8 +58,8 @@ export const NFT__DATA = [
 
   {
     id: "05",
-    title: "Here Come Da Money",
-    desc: "Buy me and I'll bring you even more money. See me holding a golden fish with my hand. You can't say that I am not magical cat.",
+    title: "Here Comes Da Money",
+    desc: "Buy me and I'll bring you even more money. See? I'm holding a golden fish with my hand, my golden hands. You can't say that I am not magical cat.",
     imgUrl: img05,
     creator: "Rahul Sharma",
     creatorImg: ava05,
@@ -69,7 +69,7 @@ export const NFT__DATA = [
   {
     id: "06",
     title: "Peace From Space",
-    desc: "Hello earthling, I am above you... literally. Saying hi from way above while listen to my classical music since that music is 'way above' you... Got it?? Hee h... I'll stay up here.",
+    desc: "Hello earthling, I'm above you... literally! Saying hi from way above while listening to my classical music since that music is 'way above' you... Get it?? Heeh... I'll stay up here.",
     imgUrl: img06,
     creator: "Calvin Huyen",
     creatorImg: ava06,
@@ -79,7 +79,7 @@ export const NFT__DATA = [
   {
     id: "07",
     title: "Ready For War",
-    desc: "Are you ready to go to war bruv. Put on your helmet, get you sword and we'll see you in Vahalla. Charging to the moon bruv!!!",
+    desc: "Are you ready to go to war bruv. Put on your helmet, get your sword and we'll see you in Vahalla. Charging to the moon bruv!!!",
     imgUrl: img07,
     creator: "Duc Nguyen",
     creatorImg: ava03,
@@ -89,7 +89,7 @@ export const NFT__DATA = [
   {
     id: "08",
     title: "Just A Happy Bull",
-    desc: "I am just happy to be here!...                                     That's it ^^.",
+    desc: "I am just happy to be here! ..... That's it. ^^",
     imgUrl: img08,
     creator: "Duc Nguyen",
     creatorImg: ava04,
@@ -99,7 +99,7 @@ export const NFT__DATA = [
   {
     id: "09",
     title: "Pondering Monkey",
-    desc: "Did you see a happy bull somewhere. He just prancing around while I didn't pay attention and now he is gone.",
+    desc: "Did you see a happy bull somewhere? He was just prancing around a while, and when I looked up, he was already gone!",
     imgUrl: img09,
     creator: "Duc Nguyen",
     creatorImg: ava05,
@@ -110,7 +110,7 @@ export const NFT__DATA = [
 export const SELLER__DATA = [
   {
     id: "01",
-    desc: "Carry my whole team since Jan 2022",
+    desc: "Carried my whole team since January 2022.",
     sellerName: "Samuel Chih",
     sellerImg: ava01,
     currentBid: 5.89,
@@ -121,7 +121,7 @@ export const SELLER__DATA = [
 
   {
     id: "02",
-    desc: "Leaguage of Legend is life",
+    desc: "League of Legends is life",
     sellerName: "Rahul Sharma",
     sellerImg: ava02,
     currentBid: 5.89,
@@ -132,7 +132,7 @@ export const SELLER__DATA = [
 
   {
     id: "03",
-    desc: "An NFTs website is just ez clapping",
+    desc: "An NFTs website? ez clap",
     sellerName: "Parker Vallier",
     sellerImg: ava03,
     currentBid: 5.89,
@@ -144,7 +144,7 @@ export const SELLER__DATA = [
   {
     id: "04",
 
-    desc: "Why am I here again? And why am I leading people",
+    desc: "Why am I here again? And why am I leading people?",
 
     sellerName: "Duc Nguyen",
     sellerImg: ava04,
