@@ -18,7 +18,7 @@ import ava06 from "../images/ava-06.png";
 export const NFT__DATA = [
   {
     id: "01",
-    title: "Travel Monkey Club",
+    title: "Testing the update of nfts",
     desc: "Just a monkey traveling with his friend, a Shiba Inu. Their smile radiates the warmest of feeling among men.",
     imgUrl: img01,
     creator: "Trista Francis",

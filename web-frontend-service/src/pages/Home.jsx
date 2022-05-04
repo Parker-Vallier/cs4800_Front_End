@@ -14,6 +14,8 @@ const Home = () => {
     <>
       <HeroSection />
       <LiveAuction />
+      {/*<SellerSection />*/}
+      {/*<Trending />*/}
       <SellerSection />
       <Trending />
       <StepSection />

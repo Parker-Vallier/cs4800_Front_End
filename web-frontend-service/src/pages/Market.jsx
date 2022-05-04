@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import CommonSection from "../components/ui/Common-section/CommonSection";
 
@@ -12,6 +12,10 @@ import "../styles/market.css";
 
 const Market = () => {
   const [data, setData] = useState(NFT__DATA);
+
+  useEffect(() => {
+    // This runs once on startup, put fetch for nfts here
+  }, [])
 
   const handleCategory = () => {};
 
