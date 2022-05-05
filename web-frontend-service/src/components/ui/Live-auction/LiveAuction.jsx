@@ -12,7 +12,12 @@ const LiveAuction = () => {
   const [nfts, setNfts] = useState(NFT__DATA);
 
   useEffect(() => {
-    // This runs once on startup, put fetch for nfts here
+    const loadNfts = async () => {
+      const url = ''
+      const response = await fetch(url)
+      setNfts( [...response])
+    }
+    loadNfts();
   }, [])
 
   return (
