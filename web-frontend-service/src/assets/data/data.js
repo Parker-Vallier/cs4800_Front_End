@@ -15,6 +15,19 @@ import ava04 from "../images/ava-04.png";
 import ava05 from "../images/ava-05.png";
 import ava06 from "../images/ava-06.png";
 
+export const POSTS__DATA = [
+  {
+    id: "01",
+    title: "Testing the update of nfts",
+    desc: "Just a monkey traveling with his friend, a Shiba Inu. Their smile radiates the warmest of feeling among men.",
+    imgUrl: img01,
+    creator: "Trista Francis",
+    creatorImg: ava01,
+    currentBid: 5.89,
+  }
+  
+]
+
 export const NFT__DATA = [
   {
     id: "01",

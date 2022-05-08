@@ -2,39 +2,40 @@ import React, { useEffect, useState } from "react";
 
 import CommonSection from "../components/ui/Common-section/CommonSection";
 
-import NftCard from "../components/ui/Nft-card/NftCard";
+import PostCard from "../components/ui/Post-card/PostCard";
 
-// import { NFT__DATA } from "../assets/data/data";
+import { POSTS__DATA } from "../assets/data/data";
 
 import { Container, Row, Col } from "reactstrap";
 
 import "../styles/market.css";
 
-const LOCAL_STORAGE_KEY = 'nftApp.nfts'
+const LOCAL_STORAGE_KEY = 'nftApp.posts'
 
 const Market = () => {
-  const [nfts, setNfts] = useState([]);
- 
+  
+  const [posts, setPosts] = useState(POSTS__DATA);
+
   useEffect(() => {
-    const storedNfts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
-    if(storedNfts) setNfts(storedNfts)
+    const storedPosts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+    if(storedPosts) setPosts(storedPosts)
   }, [])
 
   useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(nfts))
-  }, [nfts])
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(posts))
+  }, [posts])
 
 
   return (
     <>
-      <CommonSection title={"MarketPlace"} />
+      <CommonSection title={"Listings"} />
 
       <section>
         <Container>
           <Row>
-            {nfts?.map((item) => (
+            {posts?.map((item) => (
               <Col lg="3" md="4" sm="6" className="mb-4" key={item.id}>
-                <NftCard item={item} />
+                <PostCard item={item} />
               </Col>
             ))}
           </Row>

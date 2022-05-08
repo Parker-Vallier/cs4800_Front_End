@@ -14,6 +14,10 @@ const NAV__LINKS = [
     url: "/market",
   },
   {
+    display: "Listings",
+    url: "/posts",
+  },
+  {
     display: "Create",
     url: "/create",
   },

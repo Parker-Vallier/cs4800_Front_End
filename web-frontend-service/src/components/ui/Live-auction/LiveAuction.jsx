@@ -7,13 +7,20 @@ import { NFT__DATA } from "../../../assets/data/data.js";
 
 import "./live-auction.css";
 
+const LOCAL_STORAGE_KEY = 'nftApp.nfts'
+
 const LiveAuction = () => {
 
   const [nfts, setNfts] = useState(NFT__DATA);
 
   useEffect(() => {
-    // This runs once on startup, put fetch for nfts here
+    const storedNfts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+    if(storedNfts) setNfts(storedNfts)
   }, [])
+
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(nfts))
+  }, [nfts])
 
   return (
     <section>
