@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import { Container, Row, Col } from "reactstrap";
 import CommonSection from "../components/ui/Common-section/CommonSection";
-import NftCard from "../components/ui/Nft-card/NftCard";
+import PostCard from "../components/ui/Post-card/PostCard";
 import img from "../assets/images/img-01.jpg";
 import avatar from "../assets/images/ava-01.png";
 
 import "../styles/create-item.css";
+
+import { v4 as uuidv4 } from 'uuid'
+
+const LOCAL_STORAGE_KEY = 'nftApp.posts'
 
 const item = {
   id: "01",
@@ -19,6 +23,56 @@ const item = {
 };
 
 const Create = () => {
+
+  const fileRef = useRef()
+  const priceRef = useRef()
+  const minBidRef = useRef()
+  const startDateRef = useRef()
+  const endDateRef = useRef()
+  const titleRef = useRef()
+  const descRef = useRef()
+
+
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const storedPosts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+    if (storedPosts) setPosts(storedPosts)
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(posts))
+  }, [posts])
+
+
+  function handleAddPost(e) {
+
+    const newItem = {
+      id: uuidv4(),
+      title: titleRef.current.value,
+      desc: descRef.current.value,
+      imgUrl: fileRef.current.value,
+      creator: "N/A",
+      creatorImg: img,
+      currentBid: priceRef.current.value
+
+    }
+    
+    setPosts(prevPost => {
+      return [...prevPost, newItem]
+    })
+    
+    
+      fileRef.current.value = null
+      priceRef.current.value = null
+      minBidRef.current.value = null
+      startDateRef.current.value = null
+      endDateRef.current.value = null
+      titleRef.current.value = null
+      descRef.current.value = null
+    
+  }
+
   return (
     <>
       <CommonSection title="Create Item" />
@@ -28,7 +82,16 @@ const Create = () => {
           <Row>
             <Col lg="3" md="4" sm="6">
               <h5 className="mb-4 text-light">Preview Item</h5>
-              <NftCard item={item} />
+              <PostCard item={item} />
+
+              <div className=" mt-3 d-flex align-items-center justify-content-between">
+                <button
+                  className="bid__btn d-flex align-items-center gap-1"
+                  onClick={handleAddPost}
+                >
+                  Submit Post
+                </button>
+              </div>
             </Col>
 
             <Col lg="9" md="8" sm="6">
@@ -36,12 +99,13 @@ const Create = () => {
                 <form>
                   <div className="form__input">
                     <label htmlFor="">Upload File</label>
-                    <input type="file" className="upload__input" />
+                    <input ref={fileRef} type="file" className="upload__input" />
                   </div>
 
                   <div className="form__input">
                     <label htmlFor="">Price</label>
                     <input
+                      ref={priceRef}
                       type="number"
                       placeholder="Enter price for one item (DESO)"
                     />
@@ -49,29 +113,30 @@ const Create = () => {
 
                   <div className="form__input">
                     <label htmlFor="">Minimum Bid</label>
-                    <input type="number" placeholder="Enter minimum bid" />
+                    <input ref={minBidRef} type="number" placeholder="Enter minimum bid" />
                   </div>
 
                   <div className=" d-flex align-items-center gap-4">
                     <div className="form__input w-50">
                       <label htmlFor="">Starting Date</label>
-                      <input type="date" />
+                      <input ref={startDateRef} type="date" />
                     </div>
 
                     <div className="form__input w-50">
                       <label htmlFor="">Expiration Date</label>
-                      <input type="date" />
+                      <input ref={endDateRef} type="date" />
                     </div>
                   </div>
 
                   <div className="form__input">
                     <label htmlFor="">Title</label>
-                    <input type="text" placeholder="Enter title" />
+                    <input ref={titleRef} type="text" placeholder="Enter title" />
                   </div>
 
                   <div className="form__input">
                     <label htmlFor="">Description</label>
                     <textarea
+                      ref={descRef}
                       name=""
                       id=""
                       rows="7"

@@ -10,19 +10,20 @@ import { Container, Row, Col } from "reactstrap";
 
 import "../styles/market.css";
 
+const LOCAL_STORAGE_KEY = 'nftApp.posts'
+
 const Market = () => {
+  
   const [posts, setPosts] = useState(POSTS__DATA);
 
   useEffect(() => {
-    // This runs once on startup, put fetch for nfts here
-    const loadNfts = async () => {
-      const url = ''
-      const response = await fetch(url)
-      setPosts( [...response])
-      
-    }
-    loadNfts();
+    const storedPosts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+    if(storedPosts) setPosts(storedPosts)
   }, [])
+
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(posts))
+  }, [posts])
 
 
   return (

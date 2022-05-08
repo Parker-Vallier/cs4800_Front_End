@@ -24,14 +24,6 @@ export const POSTS__DATA = [
     creator: "Trista Francis",
     creatorImg: ava01,
     currentBid: 5.89,
-  },
-  {
-    PostHashHex: "",
-    PosterPublicKeyBase58Check: "",
-    Body: "",
-    ImageURLs: "",
-
-
   }
   
 ]

@@ -10,6 +10,7 @@ import Contact from "../pages/Contact";
 
 import Wallet from "../pages/Wallet";
 import NftDetails from "../pages/NftDetails";
+import PostDetails from "../pages/PostDetails";
 
 const Routers = () => {
   return (
@@ -22,6 +23,7 @@ const Routers = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/wallet" element={<Wallet />} />
       <Route path="/market/:id" element={<NftDetails />} />
+      <Route path="/posts/:id" element={<PostDetails />} />
     </Routes>
   );
 };
