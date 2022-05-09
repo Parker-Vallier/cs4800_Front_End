@@ -14,7 +14,9 @@ import {
 } from "./components";
 
 import protocol from "./utils/api/deso";
-
+const textStyle = { 
+  color: "#fff"
+}
 const Wallet = () => {
   const [auth, setAuth] = useState({});
   const [service, setService] = useState(null);
@@ -104,7 +106,7 @@ const Wallet = () => {
             </Col>
 
             <UserContext.Provider value={value}>
-              <div className="Wallet">
+              <div style={textStyle} className="Wallet">
                 {auth?.key ?
                   <div>
                     <div>{auth.key}</div>

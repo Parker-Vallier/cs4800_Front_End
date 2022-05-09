@@ -11,8 +11,8 @@ const Deso = axios.create({
 
 // I had to look into the source code to find ways to configure the library to take in a custom URI and network.
 // https://github.com/deso-protocol/deso-workspace/blob/master/libs/deso-protocol/src/index.ts
-const protocol = new DesoService(process.env.REACT_APP_DESO_NODE + "/v0");
-protocol.node.setUri(process.env.REACT_APP_DESO_NODE + "/v0");
+const protocol = new DesoService(process.env.REACT_APP_DESO_NODE);
+protocol.node.setUri(process.env.REACT_APP_DESO_NODE);
 protocol.identity.network = process.env.REACT_APP_NETWORK;
 
 protocol.posts.getPostsByPublicKey = async () => {
@@ -22,7 +22,7 @@ protocol.posts.getPostsByPublicKey = async () => {
 
   console.log(publicKey);
   
-  const path = "v0/get-posts-for-public-key";
+  const path = "/get-posts-for-public-key";
   const body = {
     "PublicKeyBase58Check": publicKey,
     "NumToFetch": 100,
@@ -34,7 +34,7 @@ protocol.posts.getPostsByPublicKey = async () => {
 }
 
 protocol.social.updateProfile = async (request) => {
-  const updateProfileResponse = await Deso.post("/v0/update-profile", request);
+  const updateProfileResponse = await Deso.post("/update-profile", request);
   const data = updateProfileResponse.data;
   const transactionHex = data.TransactionHex;
   if (transactionHex) {
@@ -53,7 +53,7 @@ protocol.user.getBalance = async () => {
     "PublicKeyBase58Check": publicKey
   }
 
-  const response = await Deso.post("/v1/balance", body);
+  const response = await Deso.post("/balance", body);
   return response.data;
 }
 
