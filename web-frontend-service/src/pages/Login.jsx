@@ -1,58 +1,87 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
 
+import "../styles/login.css";
 
-import "./Login.css";
-
-const Login = () => {
+function Login() {
   
-    return (
-      <section>
-        <div className="App">
-          <div className="appAside" />
-          <div className="appForm">
-            <div className="pageSwitcher">
-              <NavLink
-                to="/sign-in"
-                activeClassName="pageSwitcherItem-active"
-                className="pageSwitcherItem"
-              >
-                Sign In
-              </NavLink>
-              <NavLink
-                exact
-                to="/sign-up"
-                activeClassName="pageSwitcherItem-active"
-                className="pageSwitcherItem"
-              >
-                Sign Up
-              </NavLink>
-            </div>
+  const [errorMessages, setErrorMessages] = useState({});
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-            <div className="formTitle">
-              <NavLink
-                to="/sign-in"
-                activeClassName="formTitleLink-active"
-                className="formTitleLink"
-              >
-                Sign In
-              </NavLink>{" "}
-              or{" "}
-              <NavLink
-                exact
-                to="/sign-up"
-                activeClassName="formTitleLink-active"
-                className="formTitleLink"
-              >
-                Sign Up
-              </NavLink>
-            </div>
+  const database = [
+    {
+      username: "user1",
+      password: "pass1"
+    },
+    {
+      username: "user2",
+      password: "pass2"
+    }
+  ];
 
-          </div>
-        </div>
-      </section>
+  const errors = {
+    uname: "invalid username",
+    pass: "invalid password"
+  };
+
+  const handleSubmit = (event) => {
+    
+    event.preventDefault();
+
+    var { uname, pass } = document.forms[0];
+
+  
+    const userData = database.find((user) => user.username === uname.value);
+
+    
+    if (userData) {
+      if (userData.password !== pass.value) {
+        
+        setErrorMessages({ name: "pass", message: errors.pass });
+      } else {
+        setIsSubmitted(true);
+      }
+    } else {
+      
+      setErrorMessages({ name: "uname", message: errors.uname });
+    }
+  };
+
+  const renderErrorMessage = (name) =>
+    name === errorMessages.name && (
+      <div className="error">{errorMessages.message}</div>
     );
-  
-}
 
-export default Login;
+  const renderForm = (
+    <div className="form">
+      <form onSubmit={handleSubmit}>
+        <div className="input-container">
+          <label>Username </label>
+          <input type="text" name="uname" required />
+          {renderErrorMessage("uname")}
+        </div>
+        <div className="input-container">
+          <label>Password </label>
+          <input type="password" name="pass" required />
+          {renderErrorMessage("pass")}
+        </div>
+        <div className="button-container">
+          <input type="submit" />
+        </div>
+      </form>
+    </div>
+  );
+
+  return (
+    <div className="app">
+      <div className="login-form">
+        <div className="title">Sign In</div>
+        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+      </div>
+    </div>
+  );
+}
+  export default Login;
+  
+const rootElement = document.getElementById("root");
+ReactDOM.render(<Login />, rootElement);
