@@ -1,9 +1,9 @@
 //import React from "react";
 
-//import CommonSection from "../components/ui/Common-section/CommonSection";
-//import { Container, Row, Col } from "reactstrap";
+import CommonSection from "../components/ui/Common-section/CommonSection";
+import { Container, Row, Col } from "reactstrap";
 
-//import "../styles/wallet.css";
+import "../styles/wallet.css";
 
 import { useEffect, useMemo, useState } from "react";
 
@@ -14,6 +14,7 @@ import {
 } from "./components";
 
 import protocol from "./utils/api/deso";
+
 const Wallet = () => {
   const [auth, setAuth] = useState({});
   const [service, setService] = useState(null);
@@ -86,31 +87,46 @@ const Wallet = () => {
   }, [service, auth]);
 
   return (
-    <UserContext.Provider value={value}>
-      <div className="App">
-        <h1>deso nuts</h1>
-        <p>
-          college skids: web3 go brrrrrrrrrrr
-        </p>
-        <div>
-          {auth?.key ?
-            <div>
-              <div>{auth.key}</div>
-              <div>network: {auth.user.network}</div>
-              <div>balance: {nanoBalance}</div>
-              <button onClick={handleLogout}>logout</button>
-              <button onClick={onUpdateProfile}>update profile</button>
-              <hr />
-              <Listing/>
-            </div>
-            :
-            <div>
-              <button onClick={handleLogin}>login</button>
-            </div>
-          }
-        </div>
-      </div>
-    </UserContext.Provider>
+    <>
+      <CommonSection title="Connect Wallet" />
+      <section>
+        <Container>
+          <Row>
+            <Col lg="12" className="mb-5 text-center">
+              <div className="w-50 m-auto">
+                <h3 className="text-light">Connect your wallet</h3>
+                <p>
+                  Thank you for choosing NFTbay! You may begin by linking one (or many)
+                  of your wallets to our database. Simply choose a wallet you're associated with
+                  and you may begin bidding or listing whatever your heart desires!
+                </p>
+              </div>
+            </Col>
+
+            <UserContext.Provider value={value}>
+              <div className="Wallet">
+                {auth?.key ?
+                  <div>
+                    <div>{auth.key}</div>
+                    <div>network: {auth.user.network}</div>
+                    <div>balance: {nanoBalance}</div>
+                    <button onClick={handleLogout}>logout</button>
+                    <button onClick={onUpdateProfile}>update profile</button>
+                    <hr />
+                    <Listing/>
+                  </div>
+                  :
+                  <div>
+                    <button onClick={handleLogin}>login</button>
+                  </div>
+                }
+              </div>
+            </UserContext.Provider>
+          </Row>
+        </Container>
+      </section>
+    </>
+    
   );
 };
 
