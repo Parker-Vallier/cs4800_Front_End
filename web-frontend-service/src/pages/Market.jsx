@@ -17,13 +17,13 @@ const Market = () => {
  
   useEffect(() => {
     const storedNfts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+    console.log(storedNfts)
     if(storedNfts) setNfts(storedNfts)
   }, [])
 
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(nfts))
   }, [nfts])
-
 
   return (
     <>

@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import CommonSection from "../components/ui/Common-section/CommonSection";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
-import { NFT__DATA } from "../assets/data/data";
 
 import LiveAuction from "../components/ui/Live-auction/LiveAuction";
 
@@ -11,10 +10,26 @@ import "../styles/nft-details.css";
 
 import { Link } from "react-router-dom";
 
+const LOCAL_STORAGE_KEY = 'nftApp.posts'
+
 const NftDetails = () => {
   const { id } = useParams();
+  const [posts, setPosts] = useState([]);
+  const[singleNft, setSingleNft] = useState([]);
 
-  const singleNft = NFT__DATA.find((item) => item.id === id);
+  useEffect(() => {
+    const storedPosts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+    if(storedPosts) setPosts(storedPosts)
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(posts))
+    const testNft = posts.find((item) => item.id === id);
+    if(testNft) setSingleNft(testNft)
+    console.log("signleNft")
+    console.log(singleNft)
+  }, [posts, id, singleNft])
+
 
   return (
     <>

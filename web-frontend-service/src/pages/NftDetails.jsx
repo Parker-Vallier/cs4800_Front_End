@@ -1,20 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import CommonSection from "../components/ui/Common-section/CommonSection";
 import { useParams } from "react-router-dom";
 import { Container, Row, Col } from "reactstrap";
-import { NFT__DATA } from "../assets/data/data";
 
 import LiveAuction from "../components/ui/Live-auction/LiveAuction";
+
 
 import "../styles/nft-details.css";
 
 import { Link } from "react-router-dom";
 
-const NftDetails = () => {
-  const { id } = useParams();
+const LOCAL_STORAGE_KEY = 'nftApp.nfts'
 
-  const singleNft = NFT__DATA.find((item) => item.id === id);
+
+const NftDetails = () => {
+
+  const { id } = useParams();
+  const [nfts, setNfts] = useState([]);
+  const[singleNft, setSingleNft] = useState([]);
+
+  useEffect(() => {
+    const storedNfts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+    if(storedNfts) setNfts(storedNfts)
+
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(nfts))
+    const testNft = nfts.find((item) => item.id === id);
+    if(testNft) setSingleNft(testNft)
+    console.log("signleNft")
+    console.log(singleNft)
+  }, [nfts, id, singleNft])
+
+
+  
+
+  
 
   return (
     <>
