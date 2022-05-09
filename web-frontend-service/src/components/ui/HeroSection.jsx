@@ -17,10 +17,8 @@ const HeroSection = () => {
                 <span>NFTBay</span>
               </h2>
               <p>
-                NFTbay, a student project of Cal Poly Pomona
-                that allow you to invest in the future. This is where dream
-                come true as we protect your art with the state of the art
-                technology that ensure you the authentic of your work.
+                Welcome to NFTbay! Where dreams are made possible, and the Future is brought 
+                to the Now! Brought to you by the students of Cal Poly Pomona
               </p>
 
               <div className="hero__btns d-flex align-items-center gap-4">

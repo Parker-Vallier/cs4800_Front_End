@@ -20,11 +20,13 @@ const Contact = () => {
         <Container>
           <Row>
             <Col lg="6" md="6" className="m-auto text-center">
-              <h2>Drop a Message</h2>
+              <h2>Start a Ticket!</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus ipsum aperiam cumque fugit suscipit animi natus
-                nostrum voluptatem iste quam!
+              For support, please enter all the information below to begin
+              a support ticket and we will get back to you as soon as possible.
+              We apologize for the inconvenience and appreciate your patience as 
+              we make every effort to continue serving our customers. Send us your 
+              questions or concerns by starting a new case and we will give you the help you need.
               </p>
               <div className="contact mt-4">
                 <form onSubmit={handleSubmit}>
