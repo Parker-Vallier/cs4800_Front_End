@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import * as yup from 'yup';
 
 import { Container, Row, Col } from "reactstrap";
 import CommonSection from "../components/ui/Common-section/CommonSection";
@@ -7,8 +8,20 @@ import img from "../assets/images/img-01.jpg";
 import avatar from "../assets/images/ava-01.png";
 
 import "../styles/create-item.css";
-
 import { v4 as uuidv4 } from 'uuid'
+
+const schema = yup.object().shape({
+  picture: yup.mixed()
+  .test('name', 'File is required', value => {
+      return value[0] && value[0].name !== '';
+  })
+  .test('fileSize', 'The file is too large', value => {
+      return value[0] && value[0].size <= 1000000;
+  })
+  .test('type', 'We only support image', value => {
+      return value[0] && value[0].type.includes('image');
+  })
+})
 
 const LOCAL_STORAGE_KEY = 'nftApp.posts'
 
@@ -24,6 +37,7 @@ const item = {
 
 const Create = () => {
 
+
   const fileRef = useRef()
   const priceRef = useRef()
   const minBidRef = useRef()
@@ -33,12 +47,16 @@ const Create = () => {
   const descRef = useRef()
 
 
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts, errors] = useState({validationSchema: schema});
 
   useEffect(() => {
     const storedPosts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
     if (storedPosts) setPosts(storedPosts)
-  }, [])
+   
+    setPosts();
+    console.log('useEffect called')
+  },
+  [])
 
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(posts))
@@ -57,25 +75,26 @@ const Create = () => {
       currentBid: priceRef.current.value
 
     }
-    
+
     setPosts(prevPost => {
       return [...prevPost, newItem]
     })
-    
-    
-      fileRef.current.value = null
-      priceRef.current.value = null
-      minBidRef.current.value = null
-      startDateRef.current.value = null
-      endDateRef.current.value = null
-      titleRef.current.value = null
-      descRef.current.value = null
-    
+
+
+    fileRef.current.value = null
+    priceRef.current.value = null
+    minBidRef.current.value = null
+    startDateRef.current.value = null
+    endDateRef.current.value = null
+    titleRef.current.value = null
+    descRef.current.value = null
+
   }
 
   return (
     <>
       <CommonSection title="Create Item" />
+      {errors.picture && <p>{errors.picture.message}</p> }
 
       <section>
         <Container>
