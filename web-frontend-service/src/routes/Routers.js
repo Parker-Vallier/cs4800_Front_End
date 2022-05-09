@@ -8,6 +8,8 @@ import Posts from "../pages/Posts";
 import Create from "../pages/Create";
 import Contact from "../pages/Contact";
 import Login from "../pages/Login";
+import SignUp from "../pages/SignUp";
+import SignIn from "../pages/SignIn";
 
 import Wallet from "../pages/Wallet";
 import NftDetails from "../pages/NftDetails";
@@ -24,6 +26,8 @@ const Routers = () => {
       <Route path="/contact" element={<Contact />} />
       <Route path="/wallet" element={<Wallet />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/sign-up" element={<SignUp />} />
+      <Route path="/sign-in" element={<SignIn />} />
       <Route path="/market/:id" element={<NftDetails />} />
       <Route path="/posts/:id" element={<PostDetails />} />
     </Routes>

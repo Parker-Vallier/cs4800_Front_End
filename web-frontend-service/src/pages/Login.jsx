@@ -21,7 +21,7 @@ const Login = () => {
               </NavLink>
               <NavLink
                 exact
-                to="/"
+                to="/sign-up"
                 activeClassName="pageSwitcherItem-active"
                 className="pageSwitcherItem"
               >
@@ -40,7 +40,7 @@ const Login = () => {
               or{" "}
               <NavLink
                 exact
-                to="/"
+                to="/sign-up"
                 activeClassName="formTitleLink-active"
                 className="formTitleLink"
               >
