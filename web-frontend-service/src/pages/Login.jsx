@@ -1,14 +1,13 @@
-import React, { Component } from "react";
-import { HashRouter as Router, Route, NavLink } from "react-router-dom";
-import SignUpForm from "./pages/SignUpForm";
-import SignInForm from "./pages/SignInForm";
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-import "./Login.css";
 
-class App extends Component {
-  render() {
+//import "./Login.css";
+
+const Login = () => {
+  
     return (
-      <Router basename="/react-auth-ui/">
+      <section>
         <div className="App">
           <div className="appAside" />
           <div className="appForm">
@@ -49,13 +48,11 @@ class App extends Component {
               </NavLink>
             </div>
 
-            <Route exact path="/" component={SignUpForm} />
-            <Route path="/sign-in" component={SignInForm} />
           </div>
         </div>
-      </Router>
+      </section>
     );
-  }
+  
 }
 
 export default Login;
