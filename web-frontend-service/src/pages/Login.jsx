@@ -6,7 +6,7 @@ import "../styles/login.css";
 const LOGIN_KEY = 'nftApps.username'
 
 function Login() {
-  
+
   const [errorMessages, setErrorMessages] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -27,25 +27,25 @@ function Login() {
   };
 
   const handleSubmit = (event) => {
-    
+
     event.preventDefault();
 
     var { uname, pass } = document.forms[0];
 
-  
+
     const userData = database.find((user) => user.username === uname.value);
 
-    
+
     if (userData) {
       if (userData.password !== pass.value) {
-        
+
         setErrorMessages({ name: "pass", message: errors.pass });
       } else {
         setIsSubmitted(true);
         localStorage.setItem(LOGIN_KEY, uname.value)
       }
     } else {
-      
+
       setErrorMessages({ name: "uname", message: errors.uname });
     }
   };
@@ -56,23 +56,25 @@ function Login() {
     );
 
   const renderForm = (
-    <div className="form">
-      <form className="login-form-two" onSubmit={handleSubmit}>
-        <div className="input-container">
-          <label className = "username" >Username </label>
-          <input type="text" name="uname" required />
-          {renderErrorMessage("uname")}
-        </div>
-        <div className="input-container">
-          <label className="password" >Password </label>
-          <input type="password" name="pass" required />
-          {renderErrorMessage("pass")}
-        </div>
-        <div className="button-container">
-          <input type="submit" />
-        </div>
-      </form>
-    </div>
+    <center>
+      <div className="form">
+        <form className="login-form-two" onSubmit={handleSubmit}>
+          <div className="input-container">
+            <label className="username" >Username </label>
+            <input type="text" name="uname" required />
+            {renderErrorMessage("uname")}
+          </div>
+          <div className="input-container">
+            <label className="password" >Password </label>
+            <input type="password" name="pass" required />
+            {renderErrorMessage("pass")}
+          </div>
+          <div className="button-container">
+            <input type="submit" />
+          </div>
+        </form>
+      </div>
+    </center>
   );
 
   return (
@@ -83,7 +85,7 @@ function Login() {
     </div>
   );
 }
-  export default Login;
-  
+export default Login;
+
 const rootElement = document.getElementById("root");
 ReactDOM.render(<Login />, rootElement);
