@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 
 import "../styles/login.css";
 
+const LOGIN_KEY = 'nftApps.username'
+
 function Login() {
   
   const [errorMessages, setErrorMessages] = useState({});
@@ -40,6 +42,7 @@ function Login() {
         setErrorMessages({ name: "pass", message: errors.pass });
       } else {
         setIsSubmitted(true);
+        localStorage.setItem(LOGIN_KEY, uname.value)
       }
     } else {
       

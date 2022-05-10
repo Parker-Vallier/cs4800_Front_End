@@ -11,6 +11,7 @@ import "../styles/create-item.css";
 import { v4 as uuidv4 } from 'uuid'
 
 const LOCAL_STORAGE_KEY = 'nftApp.posts'
+const LOGIN_KEY = 'nftApps.username'
 
 const item = {
   id: "01",
@@ -34,6 +35,7 @@ const Create = () => {
 
 
   const [posts, setPosts] = useState([]);
+  const [username, setUsername] = useState('N/A');
 
   useEffect(() => {
     const storedPosts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
@@ -47,12 +49,17 @@ const Create = () => {
 
   function handleAddPost(e) {
 
+    const tempUser = localStorage.getItem(LOGIN_KEY)
+    console.log(tempUser)
+    if(tempUser) setUsername(tempUser)
+    console.log(username)
+
     const newItem = {
       id: uuidv4(),
       title: titleRef.current.value,
       desc: descRef.current.value,
       imgUrl: fileRef.current.value,
-      creator: "N/A",
+      creator: username,
       creatorImg: img,
       currentBid: priceRef.current.value
 
