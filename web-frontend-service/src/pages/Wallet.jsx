@@ -1,37 +1,93 @@
-import React from "react";
+//import React from "react";
 
 import CommonSection from "../components/ui/Common-section/CommonSection";
 import { Container, Row, Col } from "reactstrap";
 
 import "../styles/wallet.css";
 
-const wallet__data = [
-  {
-    title: "Bitcoin",
-    desc: "'Open-source, P2P money.' Bitcoin is the classic and most popular currency to use on our site!",
-    icon: "ri-bit-coin-line",
-  },
+import { useEffect, useMemo, useState } from "react";
 
-  {
-    title: "Coinbase",
-    desc: "'Trusted and easy-to-use,' Coinbase is one of the most user-friendly wallets that are recommended to those who've just begun their crypto-journey.",
-    icon: "ri-coin-line",
-  },
+import { UserContext } from "./utils/useUserContext";
 
-  {
-    title: "Metamask",
-    desc: "'Democratizing taccess to the decentralized web,' Metamask is also another of many recommended wallets that's popular among most users.",
-    icon: "ri-money-cny-circle-line",
-  },
+import { 
+  Listing
+} from "./components";
 
-  {
-    title: "Authereum",
-    desc: "'Simply, the best Web3 experience at your fingertips.' Authereum is dedicated to those who wish to dive into Ethereum.",
-    icon: "ri-bit-coin-line",
-  },
-];
-
+import protocol from "./utils/api/deso";
+const textStyle = { 
+  color: "#fff"
+}
 const Wallet = () => {
+  const [auth, setAuth] = useState({});
+  const [service, setService] = useState(null);
+  const [nanoBalance, setNanoBalance] = useState(0);
+
+  const handleLogin = async () => {
+    const data = await service.identity.login("4");
+    console.log(data);
+    setAuth(data);
+  }
+
+  const handleLogout = async () => {
+    await service.identity.logout(auth.key);
+    setAuth({});
+  }
+
+  const onUpdateProfile = async () => {
+    const payload = {
+      "UpdaterPublicKeyBase58Check": auth.key,
+      "MinFeeRateNanosPerKB": 10000,
+      "NewUsername": "dericiscool",
+      "NewDescription": "dank meemsmememems",
+      "NewStakeMultipleBasisPoints": 12500
+    }
+
+    try {
+      const response = await service.social.updateProfile(payload);
+      console.log(response);
+      alert("sucessfully updated profile");
+    } catch(error) {
+      console.error(error);
+      alert(error.message);
+    }
+
+  }
+
+  const getNanoBalance = async () => {
+    try {
+      const response = await service.user.getBalance();
+      setNanoBalance(response.ConfirmedBalanceNanos);
+    } catch(error) {
+      console.error(error);
+    }
+  }
+
+  useEffect(() => {
+
+    setService(protocol);
+
+    const login_key = localStorage.getItem("login_key");
+    const login_user = localStorage.getItem("login_user");
+
+    if (login_key && login_user) {
+      setAuth({
+        key: login_key,
+        user: JSON.parse(login_user)
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    getNanoBalance();
+  }, [auth])
+
+  const value = useMemo(() => {
+    return {
+      service,
+      credentials: auth
+    };
+  }, [service, auth]);
+
   return (
     <>
       <CommonSection title="Connect Wallet" />
@@ -49,21 +105,30 @@ const Wallet = () => {
               </div>
             </Col>
 
-            {wallet__data.map((item, index) => (
-              <Col lg="3" md="4" sm="6" key={index} className="mb-4">
-                <div className="wallet__item">
-                  <span>
-                    <i class={item.icon}></i>
-                  </span>
-                  <h5>{item.title}</h5>
-                  <p>{item.desc}</p>
-                </div>
-              </Col>
-            ))}
+            <UserContext.Provider value={value}>
+              <div style={textStyle} className="Wallet">
+                {auth?.key ?
+                  <div>
+                    <div>{auth.key}</div>
+                    <div>network: {auth.user.network}</div>
+                    <div>balance: {nanoBalance}</div>
+                    <button onClick={handleLogout}>logout</button>
+                    <button onClick={onUpdateProfile}>update profile</button>
+                    <hr />
+                    <Listing/>
+                  </div>
+                  :
+                  <div>
+                    <button onClick={handleLogin}>login</button>
+                  </div>
+                }
+              </div>
+            </UserContext.Provider>
           </Row>
         </Container>
       </section>
     </>
+    
   );
 };
 
