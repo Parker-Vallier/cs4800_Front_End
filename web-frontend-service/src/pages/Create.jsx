@@ -40,6 +40,8 @@ const Create = () => {
   useEffect(() => {
     const storedPosts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
     if (storedPosts) setPosts(storedPosts)
+    const tempUser = localStorage.getItem(LOGIN_KEY)
+    setUsername(tempUser)
   }, [])
 
   useEffect(() => {
@@ -48,11 +50,6 @@ const Create = () => {
 
 
   function handleAddPost(e) {
-
-    const tempUser = localStorage.getItem(LOGIN_KEY)
-    console.log(tempUser)
-    setUsername(tempUser)
-    console.log(username)
 
     const newItem = {
       id: uuidv4(),

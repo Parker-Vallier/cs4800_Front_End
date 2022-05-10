@@ -11,7 +11,7 @@ const LOCAL_STORAGE_KEY = 'nftApp.nfts'
 
 const LiveAuction = () => {
 
-  const [nfts, setNfts] = useState(NFT__DATA);
+  const [nfts, setNfts] = useState([]);
 
   useEffect(() => {
     const storedNfts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))

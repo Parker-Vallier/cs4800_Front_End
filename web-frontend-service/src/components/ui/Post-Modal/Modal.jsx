@@ -31,7 +31,6 @@ const Modal = ({id, setShowModal }) => {
 
     setNfts([...nfts, newNft]);
     setPosts(newPosts);
-    //setShowModal(false)
   }
 
   return (
