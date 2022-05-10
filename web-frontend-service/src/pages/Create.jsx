@@ -51,7 +51,7 @@ const Create = () => {
 
     const tempUser = localStorage.getItem(LOGIN_KEY)
     console.log(tempUser)
-    if(tempUser) setUsername(tempUser)
+    setUsername(tempUser)
     console.log(username)
 
     const newItem = {
