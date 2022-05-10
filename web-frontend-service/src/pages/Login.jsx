@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 
-import "../styles/login.css";
+import CommonSection from "../components/ui/Common-section/CommonSection";
+
+import "../styles/Login.css";
 
 const LOGIN_KEY = 'nftApps.username'
 
@@ -78,11 +80,16 @@ function Login() {
   );
 
   return (
-    <div className="app">
-      <div className="login-form">
-        {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
-      </div>
-    </div>
+    <>
+      <CommonSection title={"Login"} />
+      <center>
+        <div className="app">
+          <div className="login-form">
+            {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
+          </div>
+        </div>
+      </center>
+    </>
   );
 }
 export default Login;
