@@ -13,7 +13,6 @@ import SignIn from "../pages/SignIn";
 
 import Wallet from "../pages/Wallet";
 import NftDetails from "../pages/NftDetails";
-import PostDetails from "../pages/PostDetails";
 
 const Routers = () => {
   return (
@@ -29,7 +28,6 @@ const Routers = () => {
       <Route path="/sign-up" element={<SignUp />} />
       <Route path="/sign-in" element={<SignIn />} />
       <Route path="/market/:id" element={<NftDetails />} />
-      <Route path="/posts/:id" element={<PostDetails />} />
     </Routes>
   );
 };

@@ -14,7 +14,7 @@ const LOCAL_STORAGE_KEY = 'nftApp.posts'
 
 const Market = () => {
   
-  const [posts, setPosts] = useState(POSTS__DATA);
+  const [posts, setPosts] = useState([]);
 
   useEffect(() => {
     const storedPosts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
@@ -24,7 +24,6 @@ const Market = () => {
   useEffect(() => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(posts))
   }, [posts])
-
 
   return (
     <>

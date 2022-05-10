@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import "./post-card.css";
 
-import Modal from "../Modal/Modal";
+import Modal from "../Post-Modal/Modal";
 
 const PostCard = (props) => {
   const { title, id, currentBid, creatorImg, imgUrl, creator } = props.item;
@@ -18,7 +18,7 @@ const PostCard = (props) => {
 
       <div className="nft__content">
         <h5 className="nft__title">
-          <Link to={`/posts/${id}`}>{title}</Link>
+          <Link to="#">{title}</Link>
         </h5>
 
         <div className="creator__info-wrapper d-flex gap-3">
@@ -47,7 +47,7 @@ const PostCard = (props) => {
             <i class="ri-shopping-bag-line"></i> Submit Nft
           </button>
 
-          {showModal && <Modal setShowModal={setShowModal} />}
+          {showModal && <Modal setShowModal={setShowModal} id={id}/>}
 
           <span className="history__link">
             <Link to="#">View History</Link>
