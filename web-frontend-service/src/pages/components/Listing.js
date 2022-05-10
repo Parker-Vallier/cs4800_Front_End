@@ -39,7 +39,7 @@ export function Listing() {
       const request = {
         UpdaterPublicKeyBase58Check: credentials.key,
         BodyObj: { Body: value, ImageURLs: [] },
-        MinFeeRateNanosPerKB: 50,
+        MinFeeRateNanosPerKB: 1500,
       };
 
       const response = await service.posts.submitPost(request);
