@@ -6,6 +6,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `npm install` to begin installing the node js for the entire project
+
+Next, if prompted to install the missing node axios and deso-protocol, you can run:
+### `npm install axios deso-protocol`
+This install allow the program to run the Wallet.js file as it is required to contact the DESO BE and get the correct information on the DESO blockchain
+
+After install everything, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
