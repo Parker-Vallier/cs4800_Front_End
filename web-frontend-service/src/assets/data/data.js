@@ -1,3 +1,5 @@
+import img00 from "../images/img-00.jpg";
+
 import img01 from "../images/img-01.jpg";
 import img02 from "../images/img-02.jpg";
 import img03 from "../images/img-03.jpg";
@@ -29,6 +31,16 @@ export const POSTS__DATA = [
 ]
 
 export const NFT__DATA = [
+  {
+    id: "00",
+    title: "Deric, not all hero wear cape",
+    desc: "To immotarlize his relentless help in the effort to help us pass the damn class",
+    imgUrl: img00,
+    creator: "CS4800 - Spring 2022 Group 1",
+    creatorImg: ava01,
+    currentBid: 99999.9999,
+  },
+
   {
     id: "01",
     title: "Testing the update of nfts",
